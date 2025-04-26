@@ -1,5 +1,9 @@
-﻿using Microsoft.Extensions.Logging;
+﻿//Importante: para este código foi necessario adicionar as libs Microsoft.Extensions.Logging e Microsoft.Extensions.Logging.Console
+//Mas para aplicacoes que usam hosts do ASP.NET Core, essas libs já estão presentes nativamente
+//E ILogger já está presente no DI para ser injetado no construtor de classes
 
+
+using Microsoft.Extensions.Logging;
 using ILoggerFactory factory = LoggerFactory.Create(builder => builder.AddConsole());
 
 //A string passada como parametro "Program"
